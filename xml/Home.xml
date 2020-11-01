@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<window>
+    <defaultcontrol>9005</defaultcontrol>
+
+    <controls>
+
+        <control type="image" id="110000">
+            <left>-1000</left>
+            <top>-1000</top>
+            <width>10</width>
+            <height>10</height>
+            <texture background="true">$VAR[LandscapeImageVar]</texture>
+        </control>
+
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>3840</width>
+            <height>2160</height>
+            <fadetime>400</fadetime>
+            <texture background="true" colordiffuse="$VAR[blurcolor1]">masks/bkggrad.png</texture>
+        </control>
+
+        <!-- Include all widget hubs -->
+        <include>ForYouHubWidgets</include>
+        <include>MoviesHubWidgets</include>
+        <include>ShowsHubWidgets</include>
+        <include>MusicHubWidgets</include>
+        <include>SettingsHub</include>
+
+        <!-- Include main menu -->
+        <include>MainMenu</include>
+
+    </controls>
+</window>
