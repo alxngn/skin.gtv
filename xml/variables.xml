@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <variable name="version">
+        <value>0.0.2~alpha</value>
+    </variable>
+
     <!-- Progress image -->
     <variable name="ProgressImage">
         <value condition="Integer.IsEqual(ListItem.PlayCount,0) + Integer.IsEqual(ListItem.PercentPlayed,0)">overlays/unwatched/0.png</value>
@@ -143,7 +147,11 @@
 
     <variable name="AlbumArtist1">
         <value condition="Container.Content(albums)">$INFO[ListItem.Title]</value>
-        <value>$INFO[ListItem.Title]</value>
+        <value>$INFO[ListItem.label]</value>
+    </variable>
+
+    <variable name="AlbumArtist2">
+        <value condition="Container.Content(albums)">$INFO[ListItem.label2]</value>
     </variable>
 
     <variable name="DialogSelectArtwork">

@@ -541,10 +541,10 @@
                         <top>686</top>
                         <height>60</height>
                         <align>left</align>
-                        <font>WidgetRating</font>
+                        <font>WidgetTitle</font>
                         <textcolor>$PARAM[LabelColor]</textcolor>
                         <scrollsuffix>•</scrollsuffix>
-                        <label>$INFO[AlbumArtist1]</label>
+                        <label>$VAR[AlbumArtist2]</label>
                     </control>
                 </control>
             </control>

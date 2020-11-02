@@ -4,6 +4,12 @@
 
         <!-- Singular Fonts -->
         <font>
+            <name>VersionFont</name>
+            <filename>WorkSans-Regular.ttf</filename>
+            <aspect>0.89</aspect>
+            <size>32</size>
+        </font>
+        <font>
             <name>MenuButtonText</name>
             <filename>WorkSans-Medium.ttf</filename>
             <aspect>0.95</aspect>
