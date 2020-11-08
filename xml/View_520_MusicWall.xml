@@ -68,21 +68,25 @@
                 </focusedlayout>
 
                 <!-- Categorys -->
-                <itemlayout width="868" height="320" condition="Container.Content(genres) | Container.Content(years)">
+                <itemlayout width="867" height="224" condition="Container.Content(genres) | Container.Content(years)">
                     <control type="group">
-                        <top>72</top>
-                        <include content="CategoryLayout4">
+                        <top>40</top>
+                        <left>186</left>
+                        <include content="MusicCategoryLayout">
+                            <param name="ListID" value="520" />
                             <param name="ItemColor" value="MenuItemBackground" />
-                            <param name="TextColor" value="TextDim" />
+                            <param name="LabelColor" value="TextBright" />
                         </include>
                     </control>
                 </itemlayout>
-                <focusedlayout width="868" height="320" condition="Container.Content(genres) | Container.Content(years)">
+                <focusedlayout width="867" height="224" condition="Container.Content(genres) | Container.Content(years)">
                     <control type="group">
-                        <top>72</top>
-                        <include content="CategoryLayout4">
-                            <param name="ItemColor" value="Primary" />
-                            <param name="TextColor" value="TextDark" />
+                        <top>40</top>
+                        <left>186</left>
+                        <include content="MusicCategoryLayout">
+                            <param name="ListID" value="520" />
+                            <param name="ItemColor" value="TextBright" />
+                            <param name="LabelColor" value="TextDark" />
                         </include>
                     </control>
                 </focusedlayout>

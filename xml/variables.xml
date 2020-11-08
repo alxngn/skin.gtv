@@ -2,7 +2,7 @@
 <includes>
 
     <variable name="version">
-        <value>0.0.2~alpha</value>
+        <value>0.0.3~alpha</value>
     </variable>
 
     <!-- Progress image -->
@@ -179,7 +179,7 @@
     <variable name="MusicWallImageVar">
         <value condition="!String.IsEmpty(ListItem.thumb)">$INFO[ListItem.thumb]</value>
         <value condition="$EXP[isArtist]">DefaultActorSolid.png</value>
-        <value condition="$EXP[isAlbum]">DefaultAlbum.png</value>
+        <value condition="$EXP[isAlbum]">DefaultAlbumCover.png</value>
     </variable>
 
     <variable name="CastImage">

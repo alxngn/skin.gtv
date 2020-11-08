@@ -507,6 +507,7 @@
                         <top>150</top>
                         <width>440</width>
                         <height>440</height>
+                        <aspectratio>scale</aspectratio>
                         <texture background="true" diffuse="masks/Mask440x440r16.png">$VAR[MusicWallImageVar]</texture>
                     </control>
                     <control type="image">
@@ -551,5 +552,40 @@
         </definition>
     </include>
 
+    <include name="MusicCategoryLayout">
+        <definition>
+            <control type="group">
+        <animation type="Focus" reversible="false">
+            <effect type="zoom" end="114" time="50" tween="sine" center="406,122" />
+        </animation>
 
+                <control type="image">
+                    <left>42</left>
+                    <top>42</top>
+                    <width>728</width>
+                    <height>160</height>
+                    <texture background="true" colordiffuse="$PARAM[ItemColor]" border="80">masks/Mask160x160r80.png</texture>
+                </control>
+
+                <!-- Label group -->
+                <control type="group">
+                    <visible>true</visible>
+                    <animation effect="fade" time="1">VisibleChange</animation>
+
+                    <control type="label">
+                        <left>42</left>
+                        <top>42</top>
+                        <bottom>32</bottom>
+                        <width>728</width>
+                        <height>160</height>
+                        <align>center</align>
+                        <font>LibraryInfoLine</font>
+                        <textcolor>$PARAM[LabelColor]</textcolor>
+                        <scrollsuffix>•</scrollsuffix>
+                        <label>$VAR[AlbumArtist1]</label>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
 </includes>

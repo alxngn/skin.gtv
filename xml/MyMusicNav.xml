@@ -47,9 +47,6 @@
 
             </control>
 
-            <!-- Include Main Menu -->
-            <!-- <include>MainMenu</include> -->
-
         </control>
     </controls>
 </window>
