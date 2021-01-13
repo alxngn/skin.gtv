@@ -21,11 +21,7 @@
             <itemgap>0</itemgap>
             <visible>String.IsEqual(Container(9005).ListItem.Property(id),movies)</visible>
 
-            <!-- <animation effect="fade" time="100">VisibleChange</animation> -->
-            <animation type="VisibleChange">
-                <effect type="fade" time="200" delay="100" />
-                <effect type="slide" start="200,0" end="0,0" time="200" />
-            </animation>
+            <include>WidgetHubSlideAnimation</include>
 
             <!-- Spacer to push widget rows down -->
             <control type="group">
