@@ -10,8 +10,8 @@
             <control type="list" id="5678">
                 <visible>String.IsEqual(ListItem.dbtype,set)</visible>
                 <left>-1000</left>
-                <itemlayout/>
-                <focusedlayout/>
+                <itemlayout />
+                <focusedlayout />
                 <content type="video">$INFO[Container(500).ListItem.FolderPath]</content>
             </control>
 

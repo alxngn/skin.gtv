@@ -236,6 +236,7 @@
         <focusedcolor>TextDark</focusedcolor>
         <include>InfoButtonZoom</include>
     </include>
+    
     <!-- Button template for Context menu -->
     <include name="ContextButtonTemplate">
         <left>0</left>

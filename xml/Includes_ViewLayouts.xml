@@ -38,6 +38,15 @@
                         <aspectratio>scale</aspectratio>
                         <texture background="true" diffuse="masks/Mask782x440r16.png">$VAR[LandscapeImageVar]</texture>
                     </control>
+                    <!-- Fallback logo -->
+                    <control type="image">
+                        <visible>String.IsEmpty(ListItem.Art(landscape))</visible>
+                        <left>132</left>
+                        <bottom>160</bottom>
+                        <width>600</width>
+                        <height>232</height>
+                        <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+                    </control>
                     <!-- Selector -->
                     <control type="image">
                         <visible>Control.HasFocus($PARAM[ListID]) + $PARAM[Focused]</visible>
@@ -422,6 +431,15 @@
                         <label>$VAR[LibrarySectionHeader]</label>
                     </control>
 
+                    <!-- <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>800</width>
+                        <height>310</height>
+                        <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+
+                    </control> -->
+
                     <include>BottomAlignedPlot</include>
 
                     <control type="group">
@@ -452,6 +470,13 @@
                             <label>$VAR[WidgetTitle]</label>
                             <visible>Container(2000).HasNext</visible>
                         </control>
+                        <!-- <control type="image">
+                            <left>210</left>
+                            <top>640</top>
+                            <width>1000</width>
+                            <height>388</height>
+                            <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+                        </control> -->
                     </control>
                 </control>
 
@@ -654,14 +679,13 @@
 
                 <control type="image">
                     <visible>Control.HasFocus($PARAM[ListID]) + $PARAM[Focused]</visible>
-                    <!-- <fadetime>10</fadetime> -->
                     <left>-108</left>
                     <top>0</top>
                     <width>740</width>
                     <height>740</height>
                     <texture background="true" colordiffuse="$VAR[blurcolor]" border="100">masks/WidgetBlurEffect.png</texture>
                 </control>
-                <!-- Main landscape image -->
+                <!-- Main image -->
                 <control type="group">
                     <animation type="Focus" reversible="false">
                         <effect type="zoom" end="112" time="75" tween="sine" center="262,370" />

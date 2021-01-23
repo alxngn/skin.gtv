@@ -25,6 +25,7 @@
                 <itemgap>8</itemgap>
                 <align>center</align>
                 <onup>9005</onup>
+                <onback>9005</onback>
 
                 <control type="button" id="4609">
                     <include>CategoryMenuButtonTemplate</include>

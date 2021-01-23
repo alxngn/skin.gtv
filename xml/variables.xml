@@ -2,7 +2,7 @@
 <includes>
 
     <variable name="version">
-        <value>0.0.3~alpha</value>
+        <value>0.0.5~alpha</value>
     </variable>
 
     <!-- Progress image -->
@@ -151,7 +151,7 @@
     </variable>
 
     <variable name="AlbumArtist2">
-        <value condition="Container.Content(albums)">$INFO[ListItem.label2]</value>
+        <value condition="Container.Content(albums)">$INFO[ListItem.artist]</value>
     </variable>
 
     <variable name="DialogSelectArtwork">

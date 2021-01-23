@@ -16,6 +16,12 @@
             <size>68</size>
         </font>
         <font>
+            <name>OSDSettingsButtonText</name>
+            <filename>WorkSans-Medium.ttf</filename>
+            <aspect>0.95</aspect>
+            <size>38</size>
+        </font>
+        <font>
             <name>ContextTitle</name>
             <filename>WorkSans-Medium.ttf</filename>
             <aspect>0.95</aspect>
