@@ -47,7 +47,7 @@
                 <left>32</left>
                 <top>160</top>
                 <width>1336</width>
-                <!-- <height>608</height> -->
+                <height>840</height>
                 <onup>5</onup>
                 <ondown>5</ondown>
             </control>
