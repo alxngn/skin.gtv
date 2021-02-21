@@ -49,9 +49,6 @@
                     <font>WidgetTitle</font>
                     <label>$VAR[PlayTime]</label>
                 </control>
-                <!-- <include content="HorizontalDivider">
-                    <param name="value" value="100" />
-                </include> -->
             </control>
         </control>
 

@@ -11,6 +11,7 @@
     <include file="Includes_WidgetLandscape.xml" />
     <include file="Includes_WidgetCircularCast.xml" />
     <include file="Includes_WidgetSquareMusic.xml" />
+    <include file="Includes_WidgetSquareApps.xml" />
     <include file="Includes_WidgetMusicCategorys.xml" />
     <include file="Includes_WidgetLandscape_EmbuaryInfo.xml" />
     <include file="Includes_WidgetPoster_EmbuaryInfo.xml" />
@@ -19,6 +20,7 @@
     <include file="Includes_MoviesHubWidgets.xml" />
     <include file="Includes_ShowsHubWidgets.xml" />
     <include file="Includes_MusicHubWidgets.xml" />
+    <include file="Includes_AppsHubWidgets.xml" />
     <include file="Includes_SettingsHub.xml" />
 
     <include file="Includes_ViewLayouts.xml" />
@@ -236,7 +238,7 @@
         <focusedcolor>TextDark</focusedcolor>
         <include>InfoButtonZoom</include>
     </include>
-    
+
     <!-- Button template for Context menu -->
     <include name="ContextButtonTemplate">
         <left>0</left>
@@ -411,5 +413,17 @@
         </control>
     </include>
 
-
+    <include name="KeyboardButton">
+        <include>ButtonZoom</include>
+        <width>120</width>
+        <height>120</height>
+        <textoffsety>-12</textoffsety>
+        <texturefocus colordiffuse="TextBright" border="8">masks/Mask32x32r8.png</texturefocus>
+        <texturenofocus colordiffuse="TextDark" border="8">masks/Mask32x32r8.png</texturenofocus>
+        <align>center</align>
+        <aligny>top</aligny>
+        <font>WidgetLabel</font>
+        <focusedcolor>TextDark</focusedcolor>
+        <textcolor>TextBright</textcolor>
+    </include>
 </includes>

@@ -2,7 +2,7 @@
 <includes>
 
     <variable name="version">
-        <value>0.0.5~alpha</value>
+        <value>0.0.6~alpha</value>
     </variable>
 
     <!-- Progress image -->
@@ -136,12 +136,16 @@
     </variable>
 
     <variable name="WidgetTitle">
+        <value condition="Control.Isvisible(4500)">$INFO[ListItem.label]</value>
+
         <value condition="Window.IsVisible(DialogVideoInfo.xml) + String.IsEqual(ListItem.dbtype,episode)">$INFO[ListItem.season]x$VAR[EpsNumber] $INFO[ListItem.title]</value>
         <value condition="Window.IsVisible(DialogVideoInfo.xml)">$INFO[ListItem.Title]</value>
 
         <value condition="Window.IsVisible(Home.xml) + String.IsEqual(Container(4000).ListItem.dbtype,episode)">$INFO[Container(4000).ListItem.season]x$VAR[EpsNumberForYou] $INFO[Container(4000).ListItem.title]</value>
         <value condition="String.IsEqual(ListItem.dbtype,episode)">$INFO[ListItem.season]x$VAR[EpsNumber] $INFO[ListItem.title]</value>
+
         <value condition="Window.IsVisible(Home.xml)">$INFO[Container(4000).ListItem.Title]</value>
+
         <value>$INFO[ListItem.Title]</value>
     </variable>
 
