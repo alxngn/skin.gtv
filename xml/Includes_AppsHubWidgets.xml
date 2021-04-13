@@ -19,7 +19,7 @@
             <right>0</right>
             <usecontrolcoords>true</usecontrolcoords>
             <itemgap>0</itemgap>
-            <visible>String.IsEqual(Container(9005).ListItem.Property(id),apps)</visible>
+            <visible>String.IsEqual(Container(9000).ListItem.Property(id),apps)</visible>
 
             <include>WidgetHubSlideAnimation</include>
 
@@ -44,7 +44,7 @@
                     <param name="Content" value="addons://sources/video/" />
                     <param name="ContentType" value="videos" />
                     <param name="OnBack" value="SetFocus(4501,0,absolute)" />
-                    <param name="OnUp" value="9005" />
+                    <param name="OnUp" value="9000" />
                     <param name="OnDown" value="4502" />
                     <param name="GroupHeight" value="600" />
                 </include>

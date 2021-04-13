@@ -2,12 +2,12 @@
 
 <includes>
 
-    <include name="WidgetPoster_EmbuaryInfo">
+    <include name="WidgetPoster">
         <param name="WidgetLabel2" default="" />
-        <param name="Content2" default="" />
-        <param name="GroupHeight" default="700" />
+        <param name="GroupHeight" default="1200" />
         <param name="CustomOnClick" default="false" />
         <param name="FadeIfUnfocused" default="true" />
+        <param name="AlwaysShowLabel" default="false" />
         <definition>
             <control type="group">
                 <visible>Integer.IsGreater(Container($PARAM[ListID]).NumItems,0) | Container($PARAM[ListID]).IsUpdating</visible>
@@ -20,13 +20,13 @@
 
                 <!-- Header group -->
                 <control type="group">
-                    <animation effect="zoom" start="100" end="60" center="224,0" time="100" condition="!Control.HasFocus($PARAM[ListID])">Conditional</animation>
+                    <animation effect="zoom" start="100" end="60" center="224,300" time="100" condition="!Control.HasFocus($PARAM[ListID])">Conditional</animation>
                     <!-- Widget header label -->
                     <control type="label">
                         <left>224</left>
-                        <top>-200</top>
+                        <top>50</top>
                         <width>3000</width>
-                        <height>60</height>
+                        <height>0</height>
                         <aligny>top</aligny>
                         <font>WidgetLabel</font>
                         <textcolor>TextBright</textcolor>
@@ -35,10 +35,10 @@
                 </control>
                 <!-- Main widget list -->
                 <control type="fixedlist" id="$PARAM[ListID]">
-                    <top>-150</top>
+                    <top>100</top>
                     <left>0</left>
                     <right>0</right>
-                    <height>740</height>
+                    <height>1200</height>
                     <onup>$PARAM[OnUp]</onup>
                     <ondown>$PARAM[OnDown]</ondown>
                     <onback>SetFocus($PARAM[ParentID])</onback>
@@ -52,18 +52,20 @@
                     <focusposition>0</focusposition>
                     <movement>3</movement>
 
-                    <itemlayout width="866" height="740">
+                    <itemlayout width="496" height="740">
                         <control type="group">
                             <left>182</left>
                             <include content="PosterLayout">
                                 <param name="ListID" value="$PARAM[ListID]" />
                                 <param name="LabelColor" value="TextDim" />
                                 <param name="Focused" value="false" />
+                                <param name="ShowLabel1" value="$PARAM[AlwaysShowLabel]" />
+                                <param name="ShowLabel2" value="$PARAM[AlwaysShowLabel]" />
                             </include>
                         </control>
                     </itemlayout>
 
-                    <focusedlayout width="866" height="740">
+                    <focusedlayout width="496" height="740">
                         <control type="group">
                             <visible>Control.HasFocus($PARAM[ListID])</visible>
                             <left>182</left>
@@ -78,10 +80,12 @@
                         <control type="group">
                             <visible>!Control.HasFocus($PARAM[ListID])</visible>
                             <left>182</left>
-                            <include content="LandscapeLayout">
+                            <include content="PosterLayout">
                                 <param name="ListID" value="$PARAM[ListID]" />
                                 <param name="LabelColor" value="TextDim" />
                                 <param name="Focused" value="true" />
+                                <param name="ShowLabel1" value="$PARAM[AlwaysShowLabel]" />
+                                <param name="ShowLabel2" value="$PARAM[AlwaysShowLabel]" />
                             </include>
                         </control>
                     </focusedlayout>

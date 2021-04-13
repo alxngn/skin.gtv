@@ -31,10 +31,10 @@
             <width>3840</width>
             <height>2160</height>
             <fadetime>400</fadetime>
-            <texture background="true" colordiffuse="$VAR[blurcolor1]">masks/bkggrad.png</texture>
+            <texture background="true" colordiffuse="$VAR[BlurColorBackgroundVar]">masks/bkggrad.png</texture>
         </control>
         <control type="image">
-            <visible>!Container.Content(addons) + !String.Contains(Container.FolderPath,plugin://)</visible>
+            <visible>Control.IsVisible(500) | Control.IsVisible(501)</visible>
             <left>0</left>
             <top>0</top>
             <right>0</right>

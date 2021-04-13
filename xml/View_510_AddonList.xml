@@ -77,20 +77,6 @@
                 </focusedlayout>
             </control>
 
-            <control type="scrollbar" id="61">
-                <visible>Container(510).HasNext | Container(510).HasPrevious</visible>
-                <animation effect="fade" start="100" end="10" time="100" condition="!Control.HasFocus(61)">Conditional</animation>
-                <left>2100</left>
-                <top>324</top>
-                <bottom>120</bottom>
-                <width>24</width>
-                <orientation>vertical</orientation>
-                <onleft>510</onleft>
-                <texturesliderbackground border="24" colordiffuse="60404040">progress/back24_vertical.png</texturesliderbackground>
-                <texturesliderbar border="12" colordiffuse="ff808080">progress/slider24.png</texturesliderbar>
-                <texturesliderbarfocus border="12">progress/slider24.png</texturesliderbarfocus>
-            </control>
-
             <control type="group">
                 <control type="label">
                     <top>134</top>
