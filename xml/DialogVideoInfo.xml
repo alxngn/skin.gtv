@@ -229,7 +229,7 @@
 
                                 <!-- MPAA rating -->
                                 <control type="button">
-                                    <visible>!String.IsEqual(ListItem.dbtype,set)</visible>
+                                    <visible>!String.IsEqual(ListItem.dbtype,set) + !String.IsEmpty(ListItem.MPAA)</visible>
                                     <left>50</left>
                                     <width>auto</width>
                                     <top>56</top>

@@ -782,7 +782,7 @@
                     </control>
                     <!-- MPAA rating -->
                     <control type="button">
-                        <visible>String.IsEqual(Container($PARAM[ID]).ListItem.dbtype,movie) | String.IsEqual(Container($PARAM[ID]).ListItem.dbtype,tvshow) | String.IsEqual(Container($PARAM[ID]).ListItem.dbtype,episode)</visible>
+                        <visible>[String.IsEqual(Container($PARAM[ID]).ListItem.dbtype,movie) | String.IsEqual(Container($PARAM[ID]).ListItem.dbtype,tvshow) | String.IsEqual(Container($PARAM[ID]).ListItem.dbtype,episode)] + !String.IsEmpty(ListItem.MPAA)</visible>
                         <left>50</left>
                         <width>auto</width>
                         <top>56</top>
