@@ -41,24 +41,24 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
-			<label>screenshots</label>
-			<label2>Picture Source</label2>
+			<label>$LOCALIZE[1036]</label>
+			<label2>Common menu item</label2>
 			<icon>DefaultShortcut.png</icon>
 			<thumb />
-			<property name="labelID">screenshots</property>
-			<property name="defaultID" />
-			<property name="translatedPath">SlideShow(special://screenshots/,notrandom)</property>
+			<property name="labelID">1036</property>
+			<property name="defaultID">1036</property>
+			<property name="translatedPath">ActivateWindow(Favourites)</property>
 			<property name="widgetGroupTemplate">template4</property>
 			<property name="widgetArtwork.1">Landscape</property>
 			<property name="widgetArtwork.2">Landscape</property>
 			<property name="widgetArtwork.3">Landscape</property>
 			<property name="widgetArtwork.4">Landscape</property>
 			<property name="widgetArtwork.5">Landscape</property>
-			<onclick>SlideShow(special://screenshots/,notrandom)</onclick>
-			<property name="path">SlideShow(special://screenshots/,notrandom)</property>
-			<property name="list">SlideShow(special://screenshots/,notrandom)</property>
+			<onclick>ActivateWindow(Favourites)</onclick>
+			<property name="path">ActivateWindow(Favourites)</property>
+			<property name="list">Favourites</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">screenshots</property>
+			<property name="submenuVisibility">num-1036</property>
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
@@ -239,12 +239,12 @@
 			<thumb />
 			<property name="labelID">19019</property>
 			<property name="defaultID">19019</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),screenshots)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-1036)</visible>
 			<onclick>ActivateWindow(RadioChannels)</onclick>
 			<property name="path">ActivateWindow(RadioChannels)</property>
 			<property name="list">RadioChannels</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="group">screenshots</property>
+			<property name="group">1036</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="2">
@@ -256,12 +256,12 @@
 			<thumb />
 			<property name="labelID">22020</property>
 			<property name="defaultID">22020</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),screenshots)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-1036)</visible>
 			<onclick>ActivateWindow(RadioGuide)</onclick>
 			<property name="path">ActivateWindow(RadioGuide)</property>
 			<property name="list">RadioGuide</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="group">screenshots</property>
+			<property name="group">1036</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="3">
@@ -273,12 +273,12 @@
 			<thumb />
 			<property name="labelID">19163</property>
 			<property name="defaultID">19163</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),screenshots)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-1036)</visible>
 			<onclick>ActivateWindow(RadioRecordings)</onclick>
 			<property name="path">ActivateWindow(RadioRecordings)</property>
 			<property name="list">RadioRecordings</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="group">screenshots</property>
+			<property name="group">1036</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="4">
@@ -290,12 +290,12 @@
 			<thumb />
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),screenshots)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-1036)</visible>
 			<onclick>ActivateWindow(RadioTimers)</onclick>
 			<property name="path">ActivateWindow(RadioTimers)</property>
 			<property name="list">RadioTimers</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="group">screenshots</property>
+			<property name="group">1036</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="5">
@@ -307,12 +307,12 @@
 			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
-			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),screenshots)</visible>
+			<visible>[System.HasPVRAddon] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-1036)</visible>
 			<onclick>ActivateWindow(RadioSearch)</onclick>
 			<property name="path">ActivateWindow(RadioSearch)</property>
 			<property name="list">RadioSearch</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="group">screenshots</property>
+			<property name="group">1036</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="1">
