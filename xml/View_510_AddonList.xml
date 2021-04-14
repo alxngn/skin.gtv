@@ -50,7 +50,7 @@
             <visible>Control.IsVisible(510)</visible>
 
             <control type="list" id="510">
-                <visible>Container.Content(addons) | String.Contains(Container.FolderPath,plugin://)</visible>
+                <!-- <visible>Container.Content(addons) | String.Contains(Container.FolderPath,plugin://)</visible> -->
                 <top>324</top>
                 <left>328</left>
                 <width>1656</width>

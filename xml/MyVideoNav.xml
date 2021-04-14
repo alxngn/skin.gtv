@@ -2,7 +2,7 @@
 <window>
 
     <defaultcontrol always="true">500</defaultcontrol>
-    <views>50,500,501,502,510</views>
+    <views>500,501,502,510</views>
 
     <controls>
         <control type="group">

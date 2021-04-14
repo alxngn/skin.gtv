@@ -4,11 +4,28 @@
 
     <defaultcontrol>7000</defaultcontrol>
     <controls>
-        <control type="button" id="7000">
-            <width>1000</width>
-            <include>Button120</include>
-            <label>Setup Home Menus</label>
-            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+        <control type="grouplist">
+            <top>0</top>
+            <left>0</left>
+            <width>3840</width>
+            <height>2160</height>
+
+
+            <control type="button">
+                <width>1000</width>
+                <include>Button120</include>
+                <label>Setup Home Menus</label>
+                <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+            </control>
+
+            <control type="button">
+                <width>1000</width>
+                <include>Button120</include>
+                <label>Library bottom opacity</label>
+                <label2></label2>
+                <onclick></onclick>
+                <onclick>ActivateDialog(1101)</onclick>
+            </control>
         </control>
     </controls>
 </window>

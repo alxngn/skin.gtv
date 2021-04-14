@@ -436,4 +436,10 @@
         <value condition="String.IsEqual(Container(211).ListItem.Property(widgetGroupTemplate),template4)">$LOCALIZE[31531]</value>
     </variable>
 
+    <!-- Skin settings -->
+    <variable name="GTV.LibraryOpacityVar">
+		<value condition="!String.IsEmpty(Skin.String(gtv.library.opacity))">$INFO[Skin.String(gtv.library.opacity),,ffffff]</value>
+		<value>ffffffff</value>
+	</variable>
+
 </includes>

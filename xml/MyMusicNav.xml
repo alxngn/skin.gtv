@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">520</defaultcontrol>
-    <views>50,520</views>
+    <defaultcontrol always="true">510</defaultcontrol>
+    <views>510,520</views>
 
     <controls>
         <control type="group">
@@ -41,7 +41,7 @@
                 <control type="group">
                     <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
                     <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-                    <include>View_50_List</include>
+                    <include>View_510_AddonList</include>
                     <include>View_520_MusicWall</include>
                 </control>
 

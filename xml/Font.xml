@@ -34,7 +34,12 @@
             <size>48</size>
         </font>
 
-
+        <font>
+            <name>DebugText</name>
+            <filename>WorkSans-Medium.ttf</filename>
+            <aspect>0.95</aspect>
+            <size>48</size>
+        </font>
 
 
 
