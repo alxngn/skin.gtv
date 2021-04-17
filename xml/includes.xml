@@ -29,6 +29,8 @@
     <include file="script-skinshortcuts-settings.xml" />
     <include file="script-skinshortcuts-includes.xml" />
 
+    <include file="Includes_CustomSelectContent.xml" />
+
     <include file="variables.xml" />
 
     <!-- Helper Experssions -->

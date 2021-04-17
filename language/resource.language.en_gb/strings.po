@@ -189,3 +189,23 @@ msgstr ""
 msgctxt "#31532"
 msgid "More genre mixed"
 msgstr ""
+
+msgctxt "#31533"
+msgid "Setup home menus"
+msgstr ""
+
+msgctxt "#31534"
+msgid "Library fanart bottom brightness"
+msgstr ""
+
+msgctxt "#31535"
+msgid "Unfocused widget brightness"
+msgstr ""
+
+msgctxt "#31536"
+msgid "Corner brightness"
+msgstr ""
+
+msgctxt "#31537"
+msgid "Widget color glow brightness"
+msgstr ""

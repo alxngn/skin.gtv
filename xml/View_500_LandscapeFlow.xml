@@ -51,7 +51,7 @@
                 <movement>3</movement>
                 <viewtype label="Landscape Flow">icon</viewtype>
 
-                <!-- Movies / TV Shows / Seasons / Sets / Epsidoes -->
+                <!-- Movies / TV Shows / Seasons / Sets / Episodes -->
                 <itemlayout width="866" height="740">
                     <control type="group">
                         <left>182</left>
