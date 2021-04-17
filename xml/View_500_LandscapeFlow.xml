@@ -4,7 +4,7 @@
     <!-- LandscapeFlow view -->
     <include name="View_500_LandscapeFlow">
         <control type="group">
-            <visible>Control.IsVisible(500)</visible>
+            <visible>Control.IsVisible(500) + !String.Contains(Container.FolderPath,plugin)</visible>
 
             <!-- Hidden list for sets -->
             <control type="list" id="5500">
@@ -30,7 +30,7 @@
             <include>BottomAlignedPlot</include>
 
             <control type="fixedlist" id="500">
-                <visible>!String.IsEmpty(Container.FolderName)  + !String.IsEqual(Container.FolderPath,videodb://movies/) + !String.IsEqual(Container.FolderPath,videodb://tvshows/)</visible>
+                <visible>!String.IsEmpty(Container.FolderName)  + !String.IsEqual(Container.FolderPath,videodb://movies/) + !String.IsEqual(Container.FolderPath,videodb://tvshows/) + !String.StartsWith(Container.FolderPath,plugin)</visible>
                 <visible>$EXP[isPrimaryMedia]</visible>
                 <visible>!String.Contains(Container.FolderPath,sources)</visible>
 

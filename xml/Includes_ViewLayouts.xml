@@ -650,17 +650,8 @@
                         <label>$VAR[LibrarySectionHeaderVar]</label>
                     </control>
 
-                    <!-- <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>800</width>
-                        <height>310</height>
-                        <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-
-                    </control> -->
-
                     <control type="group">
-                        <visible>!Container.Content(episodes)</visible>
+                        <visible>!Container.Content(episodes) + ![Container.Content(genres) | Container.Content(studios) | Container.Content(years)]</visible>
                         <control type="textbox" id="2000">
                             <left>220</left>
                             <right>300</right>
@@ -685,13 +676,33 @@
                             <label>$VAR[WidgetTitleVar]</label>
                             <visible>Container(2000).HasNext</visible>
                         </control>
-                        <!-- <control type="image">
-                            <left>210</left>
-                            <top>640</top>
-                            <width>1000</width>
-                            <height>388</height>
-                            <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-                        </control> -->
+                    </control>
+                    <control type="group">
+                        <visible>Container.Content(genres) | Container.Content(studios) | Container.Content(years)</visible>
+                        <control type="textbox" id="2002">
+                            <left>220</left>
+                            <right>300</right>
+                            <top>710</top>
+                            <height>250</height>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <font>LibraryMainTitleBig</font>
+                            <textcolor>TextBright</textcolor>
+                            <label>$INFO[Container(532).ListItem.Title]</label>
+                            <visible>!Container(2002).HasNext</visible>
+                        </control>
+                        <control type="textbox" id="2003">
+                            <left>220</left>
+                            <right>300</right>
+                            <top>730</top>
+                            <height>250</height>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <font>LibraryMainTitleSmall</font>
+                            <textcolor>TextBright</textcolor>
+                            <label>$INFO[Container(532).ListItem.Title]</label>
+                            <visible>Container(2002).HasNext</visible>
+                        </control>
                     </control>
                 </control>
 
@@ -715,7 +726,7 @@
                         <align>left</align>
                         <font>LibraryInfoLine</font>
                         <textcolor>TextSubLabel</textcolor>
-                        <label>$VAR[NumberOfSeasonsVar]</label>
+                        <label>$INFO[Container($PARAM[ID]).ListItem.Season,, seasons]</label>
                     </control>
                     <!-- Set info -->
                     <control type="image">

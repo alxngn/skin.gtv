@@ -14,7 +14,7 @@
             </include> -->
 
             <control type="panel" id="502">
-                <visible>!$EXP[isPrimaryMedia]</visible>
+                <visible>![Container.Content(genres) | Container.Content(studios) | Container.Content(years)]</visible>
                 <top>0</top>
                 <left>0</left>
                 <right>0</right>
@@ -89,6 +89,41 @@
                             <param name="ListID" value="502" />
                             <param name="ItemColor" value="TextBright" />
                             <param name="LabelColor" value="TextDark" />
+                        </include>
+                    </control>
+                </focusedlayout>
+
+                <itemlayout width="866" height="740" condition="!Container.Content(actors) + !$EXP[isSecondaryGroup]">
+                    <control type="group">
+                        <left>182</left>
+                        <include content="LandscapeLayout">
+                            <param name="LabelColor" value="TextDim" />
+                            <param name="Focused" value="false" />
+                            <param name="ListID" value="500" />
+                            <param name="ShowProgress" value="true" />
+                        </include>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout width="866" height="740" condition="!Container.Content(actors) + !$EXP[isSecondaryGroup]">
+                    <control type="group">
+                        <visible>Control.HasFocus(500)</visible>
+                        <left>182</left>
+                        <include content="LandscapeLayout">
+                            <param name="LabelColor" value="TextBright" />
+                            <param name="Focused" value="true" />
+                            <param name="ListID" value="500" />
+                            <param name="ShowProgress" value="true" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <visible>!Control.HasFocus(500)</visible>
+                        <left>182</left>
+                        <include content="LandscapeLayout">
+                            <param name="LabelColor" value="TextDim" />
+                            <param name="Focused" value="true" />
+                            <param name="ListID" value="500" />
+                            <param name="ShowProgress" value="true" />
                         </include>
                     </control>
                 </focusedlayout>

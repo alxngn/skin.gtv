@@ -15,9 +15,10 @@
 
         <control type="grouplist" id="7000">
             <top>0</top>
-            <left>0</left>
+            <left>920</left>
             <width>3840</width>
             <height>2160</height>
+            <align>center</align>
 
 
             <control type="button" id="7001">

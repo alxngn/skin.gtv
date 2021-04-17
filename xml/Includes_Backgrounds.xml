@@ -23,7 +23,7 @@
             <texture background="true" colordiffuse="$VAR[BlurColorBackgroundVar]">masks/bkggrad.png</texture>
         </control> -->
         <control type="image">
-            <visible>Control.IsVisible(500) | Control.IsVisible(501)</visible>
+            <visible>Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(530)</visible>
             <left>0</left>
             <top>0</top>
             <right>0</right>
@@ -33,7 +33,7 @@
             <texture background="true" colordiffuse="ffc0c0c0">$VAR[BackgroundImageWithoutFallback]</texture>
         </control>
         <control type="image">
-            <visible>Control.IsVisible(500) | Control.IsVisible(501)</visible>
+            <visible>Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(530)</visible>
             <left>0</left>
             <top>0</top>
             <right>0</right>

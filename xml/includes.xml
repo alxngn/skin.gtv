@@ -25,6 +25,7 @@
     <include file="View_502_Grid.xml" />
     <include file="View_510_AddonList.xml" />
     <include file="View_520_MusicWall.xml" />
+    <include file="View_530_Category.xml" />
 
     <include file="script-skinshortcuts-settings.xml" />
     <include file="script-skinshortcuts-includes.xml" />

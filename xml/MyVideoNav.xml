@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+    <onload condition="Container.Content(genres) | Container.Content(studios)">SetFocus(531)</onload>
 
     <defaultcontrol always="true">500</defaultcontrol>
-    <views>500,501,502,510</views>
+    <views>500,501,502,510,530</views>
 
     <controls>
         <control type="group">
@@ -32,6 +33,7 @@
                     <include>View_501_Poster</include>
                     <include>View_502_Grid</include>
                     <include>View_510_AddonList</include>
+                    <include>View_530_Category</include>
                 </control>
 
                 <!-- Include menus -->

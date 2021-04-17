@@ -144,8 +144,8 @@
 
             <control type="scrollbar" id="61">
                 <animation effect="fade" start="100" end="10" time="100" condition="!Control.HasFocus(61)">Conditional</animation>
-                <left>2100</left>
-                <top>324</top>
+                <left>3800</left>
+                <top>120</top>
                 <bottom>120</bottom>
                 <width>24</width>
                 <orientation>vertical</orientation>

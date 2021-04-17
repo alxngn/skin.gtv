@@ -41,6 +41,12 @@
             <size>48</size>
         </font>
 
+        <font>
+            <name>SemiBold56</name>
+            <filename>WorkSans-SemiBold.ttf</filename>
+            <aspect>0.95</aspect>
+            <size>56</size>
+        </font>
 
 
 
