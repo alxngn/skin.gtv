@@ -27,7 +27,8 @@
             </control>
 
             <control type="list" id="530">
-                <visible>Container.Content(genres) | Container.Content(studios) | Container.Content(years)</visible>
+                <visible>$EXP[Exp_View_530]</visible>
+                <!-- <visible>Container.Content(genres) | Container.Content(studios) | Container.Content(years)</visible> -->
                 <top>60</top>
                 <left>0</left>
                 <right>0</right>
@@ -167,6 +168,20 @@
                 </focusedlayout>
 
                 <content sortby="title" sortorder="ascending" type="video">$INFO[Container(530).ListItem.FolderPath]</content>
+            </control>
+
+            <control type="group">
+                <visible>!Integer.IsGreater(Container(532).NumItems,0)</visible>
+
+                <control type="image">
+                    <top>45%</top>
+                    <left>45%</left>
+                    <bottom>45%</bottom>
+                    <right>45%</right>
+                    <texture colordiffuse="TextBright">special://skin/extras/spinners/Sun.png</texture>
+                    <aspectratio>keep</aspectratio>
+                    <animation effect="rotate" start="360" end="0" center="auto" time="3000" loop="true" condition="true">conditional</animation>
+                </control>
             </control>
         </control>
     </include>

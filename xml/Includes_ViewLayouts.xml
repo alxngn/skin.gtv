@@ -504,7 +504,7 @@
                     </control>
                     <!-- Unwatched background-->
                     <control type="image">
-                        <visible>Integer.IsEqual(ListItem.PlayCount,0) + $PARAM[ShowProgress]</visible>
+                        <visible>[Integer.IsEqual(ListItem.PlayCount,0) | !Integer.IsEqual(ListItem.PercentPlayed,0)] + $PARAM[ShowProgress]</visible>
                         <right>-108</right>
                         <top>182</top>
                         <width>64</width>
@@ -518,7 +518,7 @@
                         <top>182</top>
                         <width>64</width>
                         <height>64</height>
-                        <texture background="true">$VAR[ProgressImage]</texture>
+                        <texture background="true">$VAR[ProgressImageVar]</texture>
                     </control>
                     <control type="label">
                         <visible>$PARAM[ShowLabel1]</visible>
@@ -651,8 +651,8 @@
                     </control>
 
                     <control type="group">
-                        <visible>!Container.Content(episodes) + ![Container.Content(genres) | Container.Content(studios) | Container.Content(years)]</visible>
-                        <control type="textbox" id="2000">
+                        <visible>!Container.Content(episodes) + ![Container.Content(genres) | Container.Content(studios) | Container.Content(years) | Container.Content(countries)]</visible>
+                        <control type="label">
                             <left>220</left>
                             <right>300</right>
                             <top>710</top>
@@ -662,24 +662,11 @@
                             <font>LibraryMainTitleBig</font>
                             <textcolor>TextBright</textcolor>
                             <label>$VAR[WidgetTitleVar]</label>
-                            <visible>!Container(2000).HasNext</visible>
-                        </control>
-                        <control type="textbox" id="2001">
-                            <left>220</left>
-                            <right>300</right>
-                            <top>730</top>
-                            <height>250</height>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <font>LibraryMainTitleSmall</font>
-                            <textcolor>TextBright</textcolor>
-                            <label>$VAR[WidgetTitleVar]</label>
-                            <visible>Container(2000).HasNext</visible>
                         </control>
                     </control>
                     <control type="group">
-                        <visible>Container.Content(genres) | Container.Content(studios) | Container.Content(years)</visible>
-                        <control type="textbox" id="2002">
+                        <visible>Container.Content(genres) | Container.Content(studios) | Container.Content(years) | Container.Content(countries)</visible>
+                        <control type="label">
                             <left>220</left>
                             <right>300</right>
                             <top>710</top>
@@ -689,19 +676,6 @@
                             <font>LibraryMainTitleBig</font>
                             <textcolor>TextBright</textcolor>
                             <label>$INFO[Container(532).ListItem.Title]</label>
-                            <visible>!Container(2002).HasNext</visible>
-                        </control>
-                        <control type="textbox" id="2003">
-                            <left>220</left>
-                            <right>300</right>
-                            <top>730</top>
-                            <height>250</height>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <font>LibraryMainTitleSmall</font>
-                            <textcolor>TextBright</textcolor>
-                            <label>$INFO[Container(532).ListItem.Title]</label>
-                            <visible>Container(2002).HasNext</visible>
                         </control>
                     </control>
                 </control>

@@ -21,14 +21,16 @@
 
     <include file="View_50_List.xml" />
     <include file="View_500_LandscapeFlow.xml" />
-    <include file="View_501_Poster.xml" />
-    <include file="View_502_Grid.xml" />
-    <include file="View_510_AddonList.xml" />
-    <include file="View_520_MusicWall.xml" />
+    <include file="View_501_PosterFlow.xml" />
+    <include file="View_502_PosterGrid.xml" />
+    <include file="View_503_LandscapeGrid.xml" />
+    <include file="View_520_SquareGrid.xml" />
     <include file="View_530_Category.xml" />
 
     <include file="script-skinshortcuts-settings.xml" />
     <include file="script-skinshortcuts-includes.xml" />
+
+    <include file="script-skinviewtypes-includes.xml" />
 
     <include file="Includes_CustomSelectContent.xml" />
 
@@ -221,6 +223,7 @@
 
     <include name="ListItem120">
         <param name="UseCustomLabel" default="false" />
+        <param name="ItemColor" default="TextBright" />
 
         <definition>
             <control type="image">

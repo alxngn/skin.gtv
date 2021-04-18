@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <!-- Poster view -->
-    <include name="View_501_Poster">
+    <include name="View_501_PosterFlow">
         <control type="group">
-            <visible>Control.IsVisible(501) + !Container.Content(episodes) + !String.Contains(Container.FolderPath,plugin)</visible>
+            <visible>Control.IsVisible(501)</visible>
 
             <animation effect="slide" start="0,0" end="0,-150" time="200" condition="Control.HasFocus(60) | ControlGroup(9050).HasFocus">Conditional</animation>
 
@@ -30,7 +29,7 @@
             </include>
 
             <control type="fixedlist" id="501">
-                <visible>$EXP[isPrimaryMedia] + !String.Contains(Container.FolderPath,plugin)</visible>
+                <visible>$EXP[Exp_View_501]</visible>
 
                 <top>1200</top>
                 <left>0</left>
@@ -47,7 +46,7 @@
                 <orientation>horizontal</orientation>
                 <focusposition>0</focusposition>
                 <movement>6</movement>
-                <viewtype label="Poster Flow">icon</viewtype>
+                <viewtype label="$LOCALIZE[32002]">icon</viewtype>
 
                 <itemlayout width="496" height="740">
                     <control type="group">

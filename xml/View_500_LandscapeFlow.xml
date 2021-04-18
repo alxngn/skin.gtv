@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <!-- LandscapeFlow view -->
     <include name="View_500_LandscapeFlow">
         <control type="group">
-            <visible>Control.IsVisible(500) + !String.Contains(Container.FolderPath,plugin)</visible>
+            <visible>Control.IsVisible(500)</visible>
 
             <!-- Hidden list for sets -->
             <control type="list" id="5500">
@@ -30,9 +29,7 @@
             <include>BottomAlignedPlot</include>
 
             <control type="fixedlist" id="500">
-                <visible>!String.IsEmpty(Container.FolderName)  + !String.IsEqual(Container.FolderPath,videodb://movies/) + !String.IsEqual(Container.FolderPath,videodb://tvshows/) + !String.StartsWith(Container.FolderPath,plugin)</visible>
-                <visible>$EXP[isPrimaryMedia]</visible>
-                <visible>!String.Contains(Container.FolderPath,sources)</visible>
+                <visible>$EXP[Exp_View_500]</visible>
 
                 <top>1200</top>
                 <left>0</left>
@@ -49,7 +46,7 @@
                 <orientation>horizontal</orientation>
                 <focusposition>0</focusposition>
                 <movement>3</movement>
-                <viewtype label="Landscape Flow">icon</viewtype>
+                <viewtype label="$LOCALIZE[32001]">icon</viewtype>
 
                 <!-- Movies / TV Shows / Seasons / Sets / Episodes -->
                 <itemlayout width="866" height="740">

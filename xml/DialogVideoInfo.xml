@@ -81,7 +81,7 @@
                                 <label>$VAR[LibrarySectionHeaderVar]</label>
                             </control>
                             <control type="group">
-                                <control type="textbox" id="2000">
+                                <control type="label">
                                     <left>220</left>
                                     <right>300</right>
                                     <top>710</top>
@@ -91,19 +91,6 @@
                                     <font>LibraryMainTitleBig</font>
                                     <textcolor>TextBright</textcolor>
                                     <label>$VAR[WidgetTitleVar]</label>
-                                    <visible>!Container(2000).HasNext</visible>
-                                </control>
-                                <control type="textbox" id="2001">
-                                    <left>220</left>
-                                    <right>300</right>
-                                    <top>730</top>
-                                    <height>250</height>
-                                    <align>left</align>
-                                    <aligny>center</aligny>
-                                    <font>LibraryMainTitleSmall</font>
-                                    <textcolor>TextBright</textcolor>
-                                    <label>$VAR[WidgetTitleVar]</label>
-                                    <visible>Container(2000).HasNext</visible>
                                 </control>
                             </control>
 
