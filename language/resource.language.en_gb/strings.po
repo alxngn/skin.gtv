@@ -212,15 +212,6 @@ msgstr ""
 
 
 
-
-
-
-
-
-msgctxt "#32000"
-msgid "Listitem"
-msgstr ""
-
 msgctxt "#32001"
 msgid "Landscape flow"
 msgstr ""
@@ -243,4 +234,8 @@ msgstr ""
 
 msgctxt "#32006"
 msgid "Category"
+msgstr ""
+
+msgctxt "#32007"
+msgid "List"
 msgstr ""

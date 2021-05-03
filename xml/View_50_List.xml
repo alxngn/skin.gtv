@@ -51,6 +51,7 @@
 
             <control type="list" id="50">
                 <visible>$EXP[Exp_View_50]</visible>
+
                 <top>324</top>
                 <left>328</left>
                 <width>1656</width>
@@ -59,7 +60,7 @@
                 <onright>61</onright>
                 <onup>510</onup>
                 <ondown>510</ondown>
-                <viewtype label="$LOCALIZE[32000]">icon</viewtype>
+                <viewtype label="$LOCALIZE[32007]">list</viewtype>
                 <pagecontrol>61</pagecontrol>
                 <preloaditems>2</preloaditems>
 
@@ -106,13 +107,9 @@
                     <width>1634</width>
                     <bottom>0</bottom>
 
-                    <control type="image" id="110000">
-                        <left>-1000</left>
-                        <top>-1000</top>
-                        <width>10</width>
-                        <height>10</height>
-                        <texture background="true">$INFO[ListItem.thumb]</texture>
-                    </control>
+                    <include name="ColorGrabImage">
+                        <parma name="Image" value="$INFO[ListItem.thumb]" />
+                    </include>
 
                     <control type="image">
                         <visible>String.IsEmpty(Listitem.plot)</visible>

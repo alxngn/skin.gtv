@@ -177,7 +177,7 @@
                         <width>1648</width>
                         <height>760</height>
                         <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture background="true" colordiffuse="$VAR[GTV.UnfocusedWidgetBrightness.ColorVar]">masks/Mask782x440r16.png</texture>
+                        <texture background="true" colordiffuse="$VAR[GTV.UnfocusedWidgetBrightness.ColorVar]">masks/Mask1648x760r16.png</texture>
                     </control>
                 </control>
 
@@ -192,6 +192,7 @@
         <param name="ShowLabel1" default="false" />
         <param name="ShowLabel2" default="false" />
         <param name="LabelColor" default="TextBright" />
+        <param name="FadeIfUnfocused" default="true" />
 
         <definition>
             <control type="group">
@@ -259,7 +260,7 @@
                     </control>
                     <!-- Fade if unfocused -->
                     <control type="image">
-                        <visible>!Control.HasFocus($PARAM[ListID])</visible>
+                        <visible>!Control.HasFocus($PARAM[ListID]) + $PARAM[FadeIfUnfocused]</visible>
                         <left>42</left>
                         <top>150</top>
                         <width>782</width>
@@ -271,7 +272,7 @@
 
                 <!-- Overide label 1 if viewing episodes -->
                 <control type="label">
-                    <visible>Container.Content(episodes)</visible>
+                    <visible>Container.Content(episodes) | Control.IsVisible(542)</visible>
                     <left>42</left>
                     <width>782</width>
                     <top>626</top>
@@ -651,7 +652,7 @@
                     </control>
 
                     <control type="group">
-                        <visible>!Container.Content(episodes) + ![Container.Content(genres) | Container.Content(studios) | Container.Content(years) | Container.Content(countries)]</visible>
+                        <visible>!Container.Content(episodes) + ![Container.Content(genres) | Container.Content(studios) | Container.Content(years) | Container.Content(countries)] + !Control.Isvisible(542)</visible>
                         <control type="label">
                             <left>220</left>
                             <right>300</right>
@@ -777,7 +778,7 @@
                     </control>
                     <!-- Season number of episodes -->
                     <control type="image">
-                        <visible>Container.Content(seasons)</visible>
+                        <visible>Container.Content(seasons) + !Control.Isvisible(542)</visible>
                         <left>0</left>
                         <top>54</top>
                         <width>60</width>
@@ -786,7 +787,7 @@
                         <texture background="true">general/tvshow.png</texture>
                     </control>
                     <control type="button">
-                        <visible>Container.Content(seasons)</visible>
+                        <visible>Container.Content(seasons) + !Control.Isvisible(542)</visible>
                         <left>30</left>
                         <width>auto</width>
                         <top>29</top>
@@ -830,7 +831,7 @@
                     </control>
                     <!-- Year -->
                     <control type="button">
-                        <visible>!String.IsEmpty(Container($PARAM[ID]).ListItem.year) + !String.IsEqual(Container($PARAM[ID]).ListItem.dbtype,set) + !Container.Content(episodes)</visible>
+                        <visible>!String.IsEmpty(Container($PARAM[ID]).ListItem.year) + !String.IsEqual(Container($PARAM[ID]).ListItem.dbtype,set) + !Container.Content(episodes) + !Control.IsVisible(542)</visible>
                         <left>50</left>
                         <width>auto</width>
                         <top>56</top>
@@ -862,7 +863,7 @@
                     </control>
                     <!-- Episode date -->
                     <control type="button">
-                        <visible>Container.Content(episodes)</visible>
+                        <visible>Container.Content(episodes) | Control.IsVisible(542)</visible>
                         <left>50</left>
                         <width>auto</width>
                         <top>56</top>

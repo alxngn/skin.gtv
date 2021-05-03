@@ -2,7 +2,7 @@
 <includes>
 
     <variable name="version">
-        <value>0.1.2~alpha</value>
+        <value>0.1.4~alpha</value>
     </variable>
 
 
@@ -96,6 +96,7 @@
     <!-- Plot placeholder if empty -->
     <variable name="PlotVar">
         <value condition="String.IsEmpty(ListItem.Plot)">No plot available.</value>
+        <value condition="Control.IsVisible(542)">$INFO[Container(542).ListItem.Plot]</value>
         <value>$INFO[ListItem.Plot]</value>
     </variable>
 
@@ -203,6 +204,7 @@
     </variable>
 
     <variable name="LandscapeImageVar">
+        <value condition="Control.HasFocus(542) | Control.HasFocus(540) | ControlGroup(9050).HasFocus">$INFO[Container.ListItem.thumb]</value>
         <value condition="$EXP[isEpisode] + Container.Content(episodes)">$INFO[Container.ListItem.thumb]</value>
         <value condition="!String.IsEmpty(ListItem.Art(landscape))">$INFO[Container.ListItem.Art(landscape)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
@@ -236,6 +238,13 @@
     <variable name="AudioBitrateVar">
         <value condition="!String.IsEmpty(VideoPlayer.AudioBitrateVar)">$INFO[VideoPlayer.AudioBitrateVar] kbps</value>
         <value>Unknown</value>
+    </variable>
+
+    <variable name="ViewModeSwitchVar">
+        <value condition="String.IsEqual(Container.Content,genres) + Window.IsVisible(MyMusicNav.xml)">genres-music</value>
+        <value condition="String.IsEqual(Container.Content,years) + Window.IsVisible(MyMusicNav.xml)">years-music</value>
+        <value condition="!String.IsEmpty(Container.Content)">$INFO[Container.Content]</value>
+        <value>none</value>
     </variable>
 
 
@@ -502,22 +511,5 @@
         <value condition="String.IsEqual(Skin.String(GTV.WidgetColorGlowBrightness),7f)">50%</value>
         <value>30%</value>
     </variable>
-
-    <variable name="ESCFIX">
-        <value condition="String.Contains(Container(899).ListItem.label,&)">$INFO[Window(home).Property(MyEncodedString)]</value>
-        <value condition="String.Contains(Container(899).ListItem.label,+)">$INFO[Window(home).Property(MyEncodedString)]</value>
-        <value>$INFO[Container(899).ListItem.label]</value>
-    </variable>
-    <variable name="CustomSubSectionVar">
-        <value condition="String.IsEqual(Window(home).Property(CustomSubSectionContent),movies_genres)">videodb://movies/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$VAR[ESCFIX]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
-        <value condition="String.IsEqual(Window(home).Property(CustomSubSectionContent),shows_genres)">videodb://tvshows/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$VAR[ESCFIX]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
-        <value condition="String.IsEqual(Window(home).Property(CustomSubSectionContent),shows_studios)">videodb://tvshows/titles/?xsp=%7B%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$VAR[ESCFIX]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
-    </variable>
-    <variable name="CustomSubSectionCategoryVar">
-        <value condition="String.IsEqual(Window(home).Property(CustomSubSectionContent),movies_genres)">videodb://movies/genres/</value>
-        <value condition="String.IsEqual(Window(home).Property(CustomSubSectionContent),shows_genres)">videodb://tvshows/genres/</value>
-        <value condition="String.IsEqual(Window(home).Property(CustomSubSectionContent),shows_studios)">videodb://tvshows/studios/</value>
-    </variable>
-
 
 </includes>

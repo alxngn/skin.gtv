@@ -13,13 +13,20 @@
         <definition>
             <!-- Loading Image Background -->
             <control type="group">
-                <visible>Container($PARAM[ListID]).IsUpdating</visible>
+                <visible>Container($PARAM[ListID]).IsUpdating + Integer.IsEqual(Container($PARAM[ListID]).NumItems,0)</visible>
                 <left>224</left>
                 <top>0</top>
                 <width>782</width>
                 <height>440</height>
                 <control type="image">
                     <texture background="true" diffuse="masks/Mask782x440r16.png" colordiffuse="ff202020">general/White.png</texture>
+                </control>
+                <control type="image">
+                    <centerleft>50%</centerleft>
+                    <centertop>50%</centertop>
+                    <width>256</width>
+                    <height>256</height>
+                    <texture background="true" colordiffuse="ffa0a0a0">general/loading.gif</texture>
                 </control>
             </control>
 
@@ -143,21 +150,6 @@
                 </control>
             </control>
 
-            <!-- Loading Image Foreground -->
-            <control type="group">
-                <visible>Container($PARAM[ListID]).IsUpdating</visible>
-                <left>224</left>
-                <top>0</top>
-                <width>782</width>
-                <height>440</height>
-                <control type="image">
-                    <centerleft>50%</centerleft>
-                    <centertop>50%</centertop>
-                    <width>256</width>
-                    <height>256</height>
-                    <texture background="true" diffuse="masks/Mask782x440r16.png" colordiffuse="ffa0a0a0">general/loading.gif</texture>
-                </control>
-            </control>
         </definition>
     </include>
 

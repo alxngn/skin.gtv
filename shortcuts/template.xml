@@ -92,11 +92,6 @@
 
                 <control type="grouplist" id="16$SKINSHORTCUTS[id]00">
 
-                    <!-- Slide down 180 if submenu is not empty -->
-                    <!-- <animation effect="slide" end="0,180" time="0" condition="$EXP[subMenuNotEmpty]">Conditional</animation> -->
-                    <!-- Remove the 180 slide from above if main and sub menus loose focus and submenu is not empty -->
-                    <!-- <animation effect="slide" end="0,-180" time="200" condition="!Control.HasFocus(9000) + !Control.HasFocus(9001) + $EXP[subMenuNotEmpty]">Conditional</animation> -->
-
                     <!-- Allow slide for upto 5 widget rows (first and last rows don't slide) -->
                     <animation effect="slide" end="0,-1380" time="460" condition="Integer.IsGreater(Container(16$SKINSHORTCUTS[id]00).Position,1) + Integer.IsGreater(Container(16$SKINSHORTCUTS[id]00).NumItems,1)">Conditional</animation>
                     <animation effect="slide" end="0,-600" time="200" condition="Integer.IsGreater(Container(16$SKINSHORTCUTS[id]00).Position,2) + Integer.IsGreater(Container(16$SKINSHORTCUTS[id]00).NumItems,3)">Conditional</animation>
@@ -321,9 +316,9 @@
             <control type="group">
 
                 <skinshortcuts>visibility</skinshortcuts>
+                <include>ContentChangeAnimation</include>
 
                 <control type="grouplist" id="16$SKINSHORTCUTS[id]00">
-                    <include>ContentChangeAnimation</include>
 
                     <!-- Slide down 180 if submenu is not empty -->
                     <animation effect="slide" end="0,180" time="0" condition="$EXP[subMenuNotEmpty]">Conditional</animation>
@@ -551,9 +546,9 @@
             <control type="group">
 
                 <skinshortcuts>visibility</skinshortcuts>
+                <include>ContentChangeAnimation</include>
 
                 <control type="grouplist" id="16$SKINSHORTCUTS[id]00">
-                    <include>ContentChangeAnimation</include>
 
                     <!-- Slide down 180 if submenu is not empty -->
                     <animation effect="slide" end="0,180" time="0" condition="$EXP[subMenuNotEmpty]">Conditional</animation>

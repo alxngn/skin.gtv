@@ -4,7 +4,7 @@
     <!-- Library menu -->
     <include name="LibraryMenu">
         <control type="group">
-            <visible>Control.IsVisible(500) | Control.IsVisible(501)</visible>
+            <visible>Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(540)</visible>
             <top>2240</top>
             <animation effect="slide" start="0,0" end="0,-300" time="200" condition="Control.HasFocus(60) | ControlGroup(9050).HasFocus">Conditional</animation>
 
@@ -38,7 +38,6 @@
 
                 <!-- View button-->
                 <control type="button" id="71">
-                    <!-- <visible>Integer.IsGreater(Container.ViewCount,1)</visible> -->
                     <left>0</left>
                     <top>0</top>
                     <width>auto</width>
@@ -203,7 +202,6 @@
 
                     <!-- View button-->
                     <control type="button" id="71">
-                        <!-- <visible>Integer.IsGreater(Container.ViewCount,1)</visible> -->
                         <left>0</left>
                         <top>0</top>
                         <height>120</height>
@@ -218,9 +216,9 @@
                         <focusedcolor>TextDark</focusedcolor>
                         <include>InfoButtonZoom</include>
                         <label>Select View</label>
-                        <onclick>Runscript(script.skinvariables,action=buildviews,contentid=$INFO[Container.Content],pluginname=$INFO[Container.PluginName])</onclick>
+                        <onclick>Runscript(script.skinvariables,action=buildviews,contentid=$VAR[ViewModeSwitchVar],pluginname=$INFO[Container.PluginName])</onclick>
                     </control>
-                    <!-- <control type="button" id="81">
+                    <!-- <control type="button" id="71">
                         <visible>Integer.IsGreater(Container.ViewCount,1)</visible>
                         <left>0</left>
                         <top>0</top>

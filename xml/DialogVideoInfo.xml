@@ -7,13 +7,7 @@
             <top>0</top>
             <left>0</left>
 
-            <control type="image">
-                <top>0</top>
-                <left>0</left>
-                <width>3840</width>
-                <height>2160</height>
-                <texture background="true">geneal/Black.png</texture>
-            </control>
+            <include>DarkGreyBackground</include>
 
             <!-- Fake image for background blur -->
             <control type="image" id="100000">
@@ -23,15 +17,8 @@
                 <height>10</height>
                 <texture background="true">$VAR[BackgroundImageWithoutFallback]</texture>
             </control>
-            <control type="image" id="110000">
-                <left>-1000</left>
-                <top>-1000</top>
-                <width>10</width>
-                <height>10</height>
-                <texture background="true">$VAR[LandscapeImageVar]</texture>
-            </control>
 
-            <!-- InfoDialog background -->
+            <include>ColorGrabImage</include>
             <include>BlurredBackground</include>
 
             <control type="group">

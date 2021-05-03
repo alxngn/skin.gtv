@@ -12,18 +12,58 @@
         </control>
     </include>
 
-    <!-- Main Background -->
-    <include name="Background">
-        <!-- <control type="image">
+    <!-- Fake image for color grab -->
+    <include name="ColorGrabImage">
+        <param name="Image" default="$VAR[LandscapeImageVar]" />
+        <definition>
+            <control type="image" id="110000">
+                <left>-1000</left>
+                <top>-1000</top>
+                <width>10</width>
+                <height>10</height>
+                <texture background="true">$PARAM[Image]</texture>
+            </control>
+        </definition>
+    </include>
+
+    <!-- Dark grey background -->
+    <include name="DarkGreyBackground">
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>3840</width>
+            <height>2160</height>
+            <texture background="true" colordiffuse="ff080808">general/White.png</texture>
+        </control>
+    </include>
+
+    <!-- Screen fade image -->
+    <include name="ScreenFadeImage">
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>3840</width>
+            <height>2160</height>
+            <texture background="true" colordiffuse="ScreenFade">general/Black.png</texture>
+        </control>
+    </include>
+
+    <!-- Corner mask image -->
+    <include name="CornerMaskImage">
+        <control type="image">
             <left>0</left>
             <top>0</top>
             <width>3840</width>
             <height>2160</height>
             <fadetime>400</fadetime>
             <texture background="true" colordiffuse="$VAR[BlurColorBackgroundVar]">masks/bkggrad.png</texture>
-        </control> -->
+        </control>
+    </include>
+
+    <!-- Main Background -->
+    <include name="Background">
         <control type="image">
-            <visible>Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(530)</visible>
+            <visible>Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(530) | Control.IsVisible(540)</visible>
             <left>0</left>
             <top>0</top>
             <right>0</right>
@@ -33,7 +73,7 @@
             <texture background="true" colordiffuse="ffc0c0c0">$VAR[BackgroundImageWithoutFallback]</texture>
         </control>
         <control type="image">
-            <visible>Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(530)</visible>
+            <visible>Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(530) | Control.IsVisible(540)</visible>
             <left>0</left>
             <top>0</top>
             <right>0</right>

@@ -114,6 +114,12 @@
             <size>50</size>
         </font>
         <font>
+            <name>Medium42</name>
+            <filename>WorkSans-Medium.ttf</filename>
+            <aspect>0.89</aspect>
+            <size>42</size>
+        </font>
+        <font>
             <name>WidgetRating</name>
             <filename>WorkSans-Medium.ttf</filename>
             <aspect>0.95</aspect>
@@ -169,7 +175,7 @@
 
 
 
-        
+
 
         <font>
             <name>PlayingIconOuter</name>
