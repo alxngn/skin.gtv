@@ -38,8 +38,8 @@
                 <control type="button" id="4609">
                     <width>600</width>
                     <include>Button120</include>
-                    <label>Power</label>
-                    <onclick>ReplaceWindow(1100)</onclick>
+                    <label>Exit</label>
+                    <onclick>Quit</onclick>
                 </control>
                 <control type="button" id="4610">
                     <width>600</width>
