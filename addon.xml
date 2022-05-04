@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.gtv" version="0.1.4~alpha" name="GTV" provider-name="roidy">
+<addon id="skin.gtv" version="0.1.4" name="GTV" provider-name="roidy">
     <requires>
-        <!-- <import addon="xbmc.gui" version="5.14.0"/> -->
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" />
         <import addon="script.skinvariables" />
@@ -14,7 +13,8 @@
         <res width="3840" height="2160" aspect="16:9" default="true" folder="xml" />
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">GTV by roidy</summary>
+        <summary lang="en_GB">GTV by roidy, fixed by alxngn</summary>
+        <summary lang="en_US">GTV by roidy, fixed by alxngn</summary>
         <platform>all</platform>
         <license></license>
         <forum></forum>
